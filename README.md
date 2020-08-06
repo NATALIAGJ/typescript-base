@@ -1,11 +1,11 @@
 # typescript-base
 Este proyecto le entregara una base inicial para crear un proyecto node js con typescript como lenguaje de programación.
 
-## Empezando
+## Empezando :construction_worker:
 
 Esta guia tiene como fin entregar al usuario el paso a paso para llevar a cabo la ejecución del proyecto typescript-base. Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
 
-## Prerequisitos
+## Prerequisitos :memo:
 
 Para la ejecución del proyecto serán necesarias las siguientes herramientas.
 
