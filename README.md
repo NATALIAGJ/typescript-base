@@ -47,7 +47,7 @@ Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de de
 1. La coleccion de postam se encuentra en la siguiente ruta: 
 ['./docs/typescript-base.postman_collection.json']
 
-3. Crear una variable de entorno en postman, var host: https://localhost:8080/v1
+3. Crear una variable de entorno en postman, var host: http://localhost:8080/v1
 
 # Esquema de archivos
 
