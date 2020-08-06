@@ -28,13 +28,6 @@ export default class ExampleService {
 
     await Ejemplo.create(ejemplos)
 
-    const payload = []
-    for (let i = 0, len = lista.length; i < len; i++) {
-      const example = lista[i]
-      const reg = new Ejemplo(example)
-      await reg.save()
-      payload.push(reg)
-    }
     return ejemplos.length
   }
 

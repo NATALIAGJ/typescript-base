@@ -5,6 +5,12 @@ import { IExample } from '../schemas/SchemaExample'
 const uuid = require('uuid-base62')
 const exampleService = new ExampleService()
 
+/**
+ * GET /v1/example
+ * @summary This is the list of the examples
+ * @tags name
+ * @return {array<Example>} 200 - success response - application/json
+ */
 export async function listExamples (req: Request, res: Response, next: NextFunction) {
   try {
     const { tags } = req.query
@@ -18,6 +24,11 @@ export async function listExamples (req: Request, res: Response, next: NextFunct
   }
 }
 
+/**
+ * POST /v1/example
+ * @summary This create a new example
+ * @return {<IExample>} 201 - success response - application/json
+ */
 export async function addExample (req: Request, res: Response, next: NextFunction) {
   try {
     const example = req.body as IExample
@@ -33,6 +44,11 @@ export async function addExample (req: Request, res: Response, next: NextFunctio
   }
 }
 
+/**
+ * POST /v1/example
+ * @summary This create many examples
+ * @return {<IExample>} 201 - success response - application/json
+ */
 export async function addManyExamples (req: Request, res: Response, next: NextFunction) {
   try {
     const { lista } = req.body
@@ -46,6 +62,13 @@ export async function addManyExamples (req: Request, res: Response, next: NextFu
   }
 }
 
+/**
+ * PUT /v1/example
+ * @summary This edit an example
+ * @params id
+ * @body body
+ * @return {array<Example>} 200 - success response - application/json
+ */
 export async function editExample (req: Request, res: Response, next: NextFunction) {
   try {
     const { body, params } = req
@@ -61,6 +84,12 @@ export async function editExample (req: Request, res: Response, next: NextFuncti
   }
 }
 
+/**
+ * GET /v1/example
+ * @summary This get an example by id
+ * @params id
+ * @return {array<Example>} 200 - success response - application/json
+ */
 export async function getExample (req: Request, res: Response, next: NextFunction) {
   try {
     const { id } = req.params
@@ -84,7 +113,6 @@ export async function getExample (req: Request, res: Response, next: NextFunctio
 /**
  * Delete Example
  * This endpoint delete an example by id
- *
  * @method DELETE
  * @params id
  */
