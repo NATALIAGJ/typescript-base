@@ -1,4 +1,4 @@
-import Ejemplo, { IEjemplo } from '../schemas/SchemaEjemplo'
+import Ejemplo, { IExample } from '../schemas/SchemaExample'
 
 const { ObjectId } = require('mongodb')
 const uuid = require('uuid-base62')
@@ -10,7 +10,7 @@ export default class ExampleService {
     return ejemplos || []
   }
 
-  async createExample (example: IEjemplo) {
+  async createExample (example: IExample) {
     const newExample = await Ejemplo.create({
       ...example
     })
@@ -19,7 +19,7 @@ export default class ExampleService {
 
   async createManyExamples (lista: []) {
 
-    const ejemplos = lista.map((bodyEjemplo: IEjemplo) => {
+    const ejemplos = lista.map((bodyEjemplo: IExample) => {
       return new Ejemplo({
         ...bodyEjemplo,
         id: uuid.v4()
@@ -38,7 +38,7 @@ export default class ExampleService {
     return ejemplos.length
   }
 
-  async updateExample (exampleId: string, example: IEjemplo ) {
+  async updateExample (exampleId: string, example: IExample ) {
     const exampleUpdated = await Ejemplo.updateOne({ _id: ObjectId(exampleId) }, { $set: example })
     return exampleUpdated
   }

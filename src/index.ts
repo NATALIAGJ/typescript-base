@@ -4,7 +4,7 @@ import { Application, Response, Request } from 'express'
 import cors from 'cors'
 
 // Modules
-import ejemplo from './routes/ejemplo'
+import example from './routes/example'
 
 const app: Application = express()
 
@@ -26,7 +26,7 @@ app.get('/', ( req: Request, res: Response ) => {
     res.send('Hello Snippet');
 } )
 
-// Enrutadores
-app.use('/v1/ejemplo', ejemplo)
+// Router
+app.use('/v1/example', example)
 
 export default app

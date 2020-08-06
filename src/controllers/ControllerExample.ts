@@ -1,10 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 import ExampleService from '../services/ServiceEjemplo'
-import moment from 'moment'
-import { IEjemplo } from '../schemas/SchemaEjemplo'
+import { IExample } from '../schemas/SchemaExample'
 
 const uuid = require('uuid-base62')
-
 const exampleService = new ExampleService()
 
 export async function listExamples (req: Request, res: Response, next: NextFunction) {
@@ -22,7 +20,7 @@ export async function listExamples (req: Request, res: Response, next: NextFunct
 
 export async function addExample (req: Request, res: Response, next: NextFunction) {
   try {
-    const example = req.body as IEjemplo
+    const example = req.body as IExample
     example.id = uuid.v4()
 
     const newExample = await exampleService.createExample(example)
@@ -52,10 +50,10 @@ export async function editExample (req: Request, res: Response, next: NextFuncti
   try {
     const { body, params } = req
 
-    const ejemplo = await exampleService.updateExample(params.id, body)
+    const example = await exampleService.updateExample(params.id, body)
 
     res.status(201).json({
-      ejemplo
+      example
     })
 
   } catch (error) {
@@ -85,20 +83,19 @@ export async function getExample (req: Request, res: Response, next: NextFunctio
 
 /**
  * Delete Example
- * This endpoint delete an example by de id
+ * This endpoint delete an example by id
  *
- * @method POST
- * @role ADMIN
+ * @method DELETE
+ * @params id
  */
-export async function deleteEjemplo (req: Request, res: Response, next: NextFunction) {
+export async function deleteExample (req: Request, res: Response, next: NextFunction) {
   try {
     const { id } = req.params
 
-    const ejemplo = await exampleService.deleteExample(id)
+    await exampleService.deleteExample(id)
 
     res.status(201).json({
-      mensaje: 'Example has been deleted',
-      estado: 201
+      mensaje: 'Example has been deleted'
     })
   } catch (error) {
     next({ estado: 500, original: error })

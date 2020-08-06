@@ -1,44 +1,41 @@
 import mongoose, { Schema, Document } from 'mongoose'
-import { ICuenta } from './SchemaCuenta'
+import { IAccount } from './SchemaAccount'
 
 const uuid = require('uuid-base62')
 
-export interface ISesion extends Document {
+export interface ISession extends Document {
   id: string
-  usuario: ICuenta['_id']
-  activo: boolean
+  user: IAccount['_id']
+  isActive: boolean
   fechaCreacion: Date | null
   ultimaInteraccion: Date | null
 }
 
-const SesionSchema: Schema = new Schema({
+const SessionSchema: Schema = new Schema({
   id: {
     type: String,
     unique: true,
     index: true,
     default: uuid.v4()
   },
-  usuario: {
+  user: {
     type: Schema.Types.ObjectId,
-    ref: 'Cuenta'
+    ref: 'Account'
   },
-  activo: {
+  isActive: {
     type: Boolean,
     default: true
   },
-  fechaCreacion: {
-    type: Date,
-    default: null
-  },
-  ultimaInteraccion: {
+  lastSession: {
     type: Date,
     default: null
   }
 }, {
-  collection: 'auth_sesiones',
+  collection: 'sessions',
+  timestamps: { createdAt: 'date', updatedAt: false },
   toJSON: { virtuals: true },
   toObject: { virtuals: true },
   versionKey: false
 })
 
-export default mongoose.model<ISesion>('Sesion', SesionSchema)
+export default mongoose.model<ISession>('Session', SessionSchema)

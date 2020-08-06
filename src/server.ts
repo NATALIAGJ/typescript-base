@@ -20,7 +20,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   if (err.estado === 500) {
     logger.error(err.original)
     res.status(500).json({
-      mensaje: 'Tenemos problemas con el servidor. Se ha creado una notificacion al área de soporte sobre este error. Gracias por tu paciencia'
+      mensaje: 'Service not available'
     })
   } else {
     res.status(err.estado).json({
@@ -31,8 +31,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
 app.use((req: Request, res: Response) => {
   res.status(404).json({
-    mensaje: 'El recurso solicitado no ha sido encontrado',
-    codigo: 'general'
+    mensaje: 'Resource not found'
   })
 })
 
