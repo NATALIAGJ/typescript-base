@@ -44,19 +44,10 @@ Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de de
     ```
 ## Configuración del entorno de pruebas
 
-1. Archivos necesarios para configurar el entorno de pruebas:
+1. La coleccion de postam se encuentra en la siguiente ruta: 
+['./docs/typescript-base.postman_collection.json']
 
-Estos archivos de configuración se encuentra en la siguiente carpeta dentro del repositorio repositorio:
-[TestingFiles](https://github.com/dbsolution-computacion-e-informatica/junngla-qri-api-service/tree/master/dev/docs/api/TestEnvironments)
-
-    .
-    └── Postman Collection
-
-2. Configuración de Postman e importación de la colección.
-![Postman Setup](https://res.cloudinary.com/simplecol/image/upload/v1589316059/postman_af92ob.png)
-
-3. Crear una variable de entorno en postman, var host: https://localhost:3000
-![Postman Var](https://res.cloudinary.com/simplecol/image/upload/v1575999012/postam_var_host_wltscs.png)
+3. Crear una variable de entorno en postman, var host: https://localhost:8080/v1
 
 # Esquema de archivos
 
