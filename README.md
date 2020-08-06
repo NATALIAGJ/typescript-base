@@ -1,22 +1,21 @@
 # typescript-base
 Este proyecto le entregara una base inicial para crear un proyecto node js con typescript como lenguaje de programación.
 
-## Empezando :construction_worker:
-
+## Empezando 🚀
 Esta guia tiene como fin entregar al usuario el paso a paso para llevar a cabo la ejecución del proyecto typescript-base. Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
 
-## Prerequisitos :memo:
+## Prerequisitos 🗒️
 
 Para la ejecución del proyecto serán necesarias las siguientes herramientas.
 
-```
+``` 
   * Git
   * Node Js
   * Mongo
   * Postman
 ```
 
-### Instalación
+### Instalación ⛏️ 
 
 Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de desarrollo.
 
@@ -42,14 +41,14 @@ Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de de
     ```sh
         [typescript-base] $ npm run watch
     ```
-## Configuración del entorno de pruebas
+## Configuración del entorno de pruebas 🛠️
 
-1. La coleccion de postam se encuentra en la siguiente ruta: 
+1. La coleccion de postman se encuentra en la siguiente ruta: 
 ['./docs/typescript-base.postman_collection.json']
 
 3. Crear una variable de entorno en postman, var host: http://localhost:8080/v1
 
-# Esquema de archivos
+# Esquema de archivos 📁
 
     Ditribución de alto nivel de las carpetas
 
@@ -68,7 +67,7 @@ Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de de
     └── tslint.json
 
     
-## Construcción:
+## Construcción:  🔩⚙️
 
 * [Express](https://expressjs.com/es/) - Framework usado
 * [TypeScript](https://www.typescriptlang.org/) - Lenguaje de programación
@@ -77,6 +76,6 @@ Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de de
 
 Se uso '/v1' como versión.
 
-## Contribuyentes
+## Contribuyentes 👩🏻‍🚒
 
 * **Natalia Gonzalez** - *Dev* - [NATALIAGJ](https://github.com/NATALIAGJ)
