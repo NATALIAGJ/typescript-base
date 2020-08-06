@@ -1,5 +1,5 @@
 # typescript-base
-Este proyecto le entregara una base inicial para crear un proyecto node js con typescript conmo lenguaje de programación.
+Este proyecto le entregara una base inicial para crear un proyecto node js con typescript como lenguaje de programación.
 
 ## Empezando
 

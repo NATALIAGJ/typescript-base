@@ -22,10 +22,6 @@ app.all(['/', '/v1', '/v1/ping', '/ping'], (req: Request, res: Response) => {
     })
 })
 
-app.get('/', ( req: Request, res: Response ) => {
-    res.send('Hello Snippet');
-} )
-
 // Router
 app.use('/v1/example', example)
 

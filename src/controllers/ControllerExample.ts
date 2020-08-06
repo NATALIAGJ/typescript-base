@@ -73,7 +73,7 @@ export async function getExample (req: Request, res: Response, next: NextFunctio
       })
     } else {
       res.status(404).json({
-        mensaje: 'Does not found example'
+        message: 'Does not found example'
       })
     }
   } catch (error) {
@@ -95,7 +95,7 @@ export async function deleteExample (req: Request, res: Response, next: NextFunc
     await exampleService.deleteExample(id)
 
     res.status(201).json({
-      mensaje: 'Example has been deleted'
+      message: 'Example has been deleted'
     })
   } catch (error) {
     next({ estado: 500, original: error })
