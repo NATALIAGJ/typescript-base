@@ -1,7 +1,7 @@
 # typescript-base
 Este proyecto le entregara una base inicial para crear un proyecto node js con typescript como lenguaje de programación.
 
-## Empezando 🚀 🧑‍🚀
+## Empezando 🚀 
 Esta guia tiene como fin entregar al usuario el paso a paso para llevar a cabo la ejecución del proyecto typescript-base. Estas instrucciones le proporcionarán una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
 
 ## Prerequisitos 🗒️
@@ -37,11 +37,16 @@ Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de de
         └── .env
 
 7. Se debe crear el archivo .env y es una copia del archivo .env-example con los valores reales.
-8. Para ejecutar el aplicativo en desarrollo escriba los siguientes comando.
+8. Compilar el typescript.
     ```sh
-        [typescript-base] $ npm run watch
+        [typescript-base] $  npm run tsc
     ```
-## Configuración del entorno de pruebas 🛠️
+
+9. Para ejecutar el aplicativo en desarrollo escriba los siguientes comando.
+    ```sh
+        [typescript-base] $  npm run watch
+    ```
+## Configuración del entorno de pruebas 🛠️ 
 
 1. La coleccion de postman se encuentra en la siguiente ruta: 
 ['./docs/typescript-base.postman_collection.json']
