@@ -39,7 +39,7 @@ Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de de
 7. Se debe crear el archivo .env y es una copia del archivo .env-example con los valores reales.
 8. Compilar el typescript.
     ```sh
-        [typescript-base] $  npm run tsc
+        [typescript-base] $  npm run build-ts
     ```
 
 9. Para ejecutar el aplicativo en desarrollo escriba los siguientes comando.
